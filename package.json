@@ -11,5 +11,8 @@
     "url": "VUE_ui"
   },
   "author": "wp",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.2.39"
+  }
 }
