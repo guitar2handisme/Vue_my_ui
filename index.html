@@ -25,36 +25,46 @@
       margin: 20px;
     }
   </style>
-  <style>
-    .wp-button {
-      height: var(--button-height);
-      font-size: var(--button-size);
-      padding: 0 1em;
-      border-radius: var(--border-radius);
-      border: 1px solid var(--border-color);
-      background-color: var(--button-bg);
-    }
-    .wp-button:hover {
-      border-color: var(--border-hover-color);
-    }
-    .wp-button:active {
-      background-color: var(--button-active-bg);
-    }
-  </style>
 </head>
 <body>
   <div id="app">
-    <wp-button></wp-button>
+    <wp-button iconname="shezhi" position="left" :loading="loading_1" @click.native="loading_1 = !loading_1">
+      <template>
+        <span>设置</span>
+      </template>
+    </wp-button>
+    <wp-button iconname="dianzan" position="right"  :loading="loading_2"  @click="loading_2 = !loading_2">
+      <template>
+        <span>点赞</span>
+      </template>
+    </wp-button>
+    <wp-button iconname="xiala" position="left" :loading="loading_3" @click="loading_3 = !loading_3">
+      <template>
+        <span>下载</span>
+      </template>
+    </wp-button>
+    <wp-button :loading="loading_4" @click="loading_4 = !loading_4">
+      <template>
+        <span>加载</span>
+      </template>
+    </wp-button>
+    <wp-group-button>
+      <wp-button iconname="left">
+        <template>
+          <span>左</span>
+        </template>
+      </wp-button>
+      <wp-button>
+        中间
+      </wp-button>
+      <wp-button iconname="right" position="right">
+        <template>
+          <span>右</span>
+        </template>
+      </wp-button>
+    </wp-group-button>
   </div>
-  <script src="./node_modules/vue/dist/vue.min.js"></script>
-  <script src="./wp_button.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        message: 'HI'
-      },
-    })
-  </script>
+  <script src="./src/app.js"></script>
+  <script src="//at.alicdn.com/t/c/font_3658142_9t2yw2suehf.js"></script>
 </body>
 </html>

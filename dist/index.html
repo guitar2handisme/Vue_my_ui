@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大王UI库</title>
+  <style>* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --button-height: 32px;
+      --button-size: 14px;
+      --button-bg:white;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-hover-color: #666;
+    }
+    body {
+      margin: 20px;
+    }</style>
+<link rel="stylesheet" href="/app.a6a4d504.css"></head>
+<body>
+  <div id="app">
+    <wp-button iconname="shezhi" position="left" :loading="loading_1" @click.native="loading_1 = !loading_1">
+      <template>
+        <span>设置</span>
+      </template>
+    </wp-button>
+    <wp-button iconname="dianzan" position="right" :loading="loading_2" @click="loading_2 = !loading_2">
+      <template>
+        <span>点赞</span>
+      </template>
+    </wp-button>
+    <wp-button iconname="xiala" position="left" :loading="loading_3" @click="loading_3 = !loading_3">
+      <template>
+        <span>下载</span>
+      </template>
+    </wp-button>
+    <wp-button :loading="loading_4" @click="loading_4 = !loading_4">
+      <template>
+        <span>加载</span>
+      </template>
+    </wp-button>
+    <wp-group-button>
+      <wp-button iconname="left">
+        <template>
+          <span>左</span>
+        </template>
+      </wp-button>
+      <wp-button>
+        中间
+      </wp-button>
+      <wp-button iconname="right" position="right">
+        <template>
+          <span>右</span>
+        </template>
+      </wp-button>
+    </wp-group-button>
+  </div>
+  <script src="/app.a6a4d504.js"></script>
+  <script src="//at.alicdn.com/t/c/font_3658142_9t2yw2suehf.js"></script>
+</body>
+</html>
